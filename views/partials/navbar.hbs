@@ -1,0 +1,14 @@
+<nav class="nav justify-content-between">
+    <div class="d-flex flex-row">
+        <a class="navbar-brand" href="/">Post<span style="color: #706EFF;">-it</span></a>
+        <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item me-4 ms-4 {{active path '/'}}">
+                <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item {{active path '/posts'}}">
+                <a href="/posts" class="nav-link">Posts</a>
+            </li>
+        </ul>
+    </div>
+    <a class="btn btn-primary" href="/posts/new" role="button">Create post</a>
+</nav>

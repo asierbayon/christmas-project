@@ -1,0 +1,29 @@
+<a href="/posts">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+    </svg>
+</a>
+{{#if create}}
+<h1 class="mt-3">Create a <span style="color: #706EFF;">new post</span></h1>
+{{else}}
+<h1 class="mt-3">Edit <span style="color: #706EFF;">post</span></h1>
+{{/if}}
+<form action="/posts{{#unless create}}/{{post.id}}/edit{{/unless}}" method="post">
+    <div class="form-floating mb-3 mt-5">
+        <input id="floatingInputTitle" type="text" class="form-control {{#if errors.title}}is-invalid{{/if}}" name="title" placeholder="Type title..." value="{{post.title}}">
+        <label for="floatingInputTitle">Task</label>
+    </div>
+    <div class="form-floating mb-3">
+        <textarea type="text" class="form-control {{#if errors.text}}is-invalid{{/if}}" name="text" rows="15" placeholder="Type a description of your task..." id="floatingTextarea2" style="height: 250px">{{post.text}}</textarea>
+        <label for="floatingTextarea2">Description</label>
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text">Image URL</span>
+        <input type="text" class="form-control" name="image" placeholder="https://i.imgur.com/..." value="{{post.image}}">
+    </div>
+    {{#if create}}
+    <button type="submit" class="btn btn-primary btn-post mt-3">Create a post</button>
+    {{else}}
+    <button type="submit" class="btn btn-primary btn-post mt-3">Update post</button>
+    {{/if}}
+</form>

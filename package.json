@@ -1,0 +1,28 @@
+{
+  "name": "christmas-project",
+  "version": "1.0.0",
+  "description": "Let's create a simple blog to practise CRUD with express!",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon -e hbs,js,css app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asierbayon/christmas-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asierbayon/christmas-project/issues"
+  },
+  "homepage": "https://github.com/asierbayon/christmas-project#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "http-errors": "^1.8.0"
+  }
+}

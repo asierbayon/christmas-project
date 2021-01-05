@@ -23,7 +23,6 @@ class Post {
             createdAt: new Date(),
             updatedAt: new Date(),
         });
-
         return Promise.resolve(newPost);
     }
 
