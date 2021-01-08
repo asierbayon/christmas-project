@@ -19,6 +19,7 @@ const router = require('./config/router.config');
 app.use('/', router);
 
 app.use((req, res, next) => {
+	console.log('not found middleware')
 	next(createError(404));
 });
 
